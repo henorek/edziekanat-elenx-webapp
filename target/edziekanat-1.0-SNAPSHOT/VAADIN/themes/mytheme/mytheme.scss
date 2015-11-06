@@ -1,0 +1,115 @@
+// Global variable overrides. Must be declared before importing Valo.
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+/* This font-face declaration must be outside your theme mixin. */
+$v-app-loading-text: "Flat Valo";
+
+$v-font-family: "Roboto", sans-serif;
+$v-font-weight: 400;
+$v-font-weight--header: 400;
+$v-background-color: #fff;
+$v-focus-color: rgb(150,190,90);
+$v-luminance-threshold: 180;
+$v-border: 2px solid v-shade;
+$v-border-radius: 2px;
+$v-bevel: false;
+$v-gradient: false;
+$v-shadow: false;
+$v-textfield-bevel: false;
+$v-textfield-shadow: false;
+$v-link-text-decoration: false;
+$v-selection-overlay-padding-horizontal: 0;
+$v-selection-overlay-padding-vertical: 6px;
+$v-selection-item-height: 30px;
+$v-selection-item-border-radius: 0;
+$valo-menu-background-color: #eee;
+
+@import "../valo/valo";
+
+.valo-test {
+  .v-button-primary.v-button-primary {
+    background: #fff;
+    border-color: $v-focus-color;
+    color: $v-focus-color;
+  }
+
+  .v-button-danger.v-button-danger {
+    background: #fff;
+    border-color: $v-error-indicator-color;
+    color: $v-error-indicator-color;
+  }
+
+  .v-slider-base:before,
+  .v-slider-base:after {
+    border: none !important;
+  }
+}
+
+@font-face {
+  font-family: 'Vaadin-Icons';
+  src: url('fonts/Vaadin-Icons.eot');
+  src: url('fonts/Vaadin-Icons.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Vaadin-Icons.woff') format('woff'),
+  url('fonts/Vaadin-Icons.ttf') format('truetype'),
+  url('fonts/Vaadin-Icons.svg#icomoon') format('svg');
+}
+.Vaadin-Icons {
+  font-family: 'Vaadin-Icons';
+}
+
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+
+  // Insert your own theme rules here
+  .v-margin-left {
+    padding-left: 10px;
+  }
+  .v-margin-right {
+    padding-right: 10px;
+  }
+  .v-margin-top {
+    padding-top: 5px;
+  }
+  .v-margin-bottom {
+    padding-bottom: 5px;
+  }
+
+  //Hamburger Button styling
+  .hamburger-button {
+    background: #fff;
+    border: none;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 0 0 0 !important;
+  }
+
+  //Elenx logo styling
+  .elenx-logo {
+    font-weight: bold;
+    height: 40px !important;
+    padding: 0 5px 5px 5px !important;
+    font-size: 24px;
+  }
+}
