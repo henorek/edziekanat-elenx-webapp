@@ -1,0 +1,19 @@
+## Project structure
+
++- src/
+   +- main/
+      +- java/
+         +- net.elenx/
+            +- views/                                               //Pages displayed to users
+               |
+               +- MainView.java
+            +- modules/                                             //Elements that create views, like navbars
+               |
+               +- Sidebar.java
+               +- NavigationBar.java
+               +- MainContent.java
+            +- components/                                          //Custom components (if needed)
+            +- data/                                                //Data providers (database connections)
+
+## TODO: Spring implementation | Better distribution of packages | Code behind hamburger menu | Sidebar design
+

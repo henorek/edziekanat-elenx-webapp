@@ -1,9 +1,9 @@
-package net.elenx;
+package net.elenx.modules;
 
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Panel;
 
-public class MainContentUI {
+public class MainContent {
 
     private Panel mainContentPanel;
 

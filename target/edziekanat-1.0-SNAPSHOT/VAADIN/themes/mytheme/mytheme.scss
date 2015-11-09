@@ -27,11 +27,11 @@ $v-app-loading-text: "Flat Valo";
 $v-font-family: "Roboto", sans-serif;
 $v-font-weight: 400;
 $v-font-weight--header: 400;
-$v-background-color: #fff;
+$v-background-color: #f1f1f1;
 $v-focus-color: rgb(150,190,90);
 $v-luminance-threshold: 180;
-$v-border: 2px solid v-shade;
-$v-border-radius: 2px;
+$v-border: 1px solid v-shade;
+$v-border-radius: 1px;
 $v-bevel: false;
 $v-gradient: false;
 $v-shadow: false;
@@ -96,6 +96,12 @@ $valo-menu-background-color: #eee;
     padding-bottom: 5px;
   }
 
+  //Navigation Bar styling
+  .navigation-bar {
+    background: #fff;
+    border: valo-border($border: 1px solid v-shade);
+  }
+
   //Hamburger Button styling
   .hamburger-button {
     background: #fff;
@@ -111,5 +117,17 @@ $valo-menu-background-color: #eee;
     height: 40px !important;
     padding: 0 5px 5px 5px !important;
     font-size: 24px;
+  }
+
+  .sidebar {
+    background: #24272e;
+
+  }
+
+  .sidebar-button {
+    background: #24272e;
+    border: #24272e;
+    font-family: "Roboto", sans-serif;
+    color: #fff;
   }
 }
