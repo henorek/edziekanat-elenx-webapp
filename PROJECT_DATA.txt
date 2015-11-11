@@ -15,5 +15,5 @@
             +- components/                                          //Custom components (if needed)
             +- data/                                                //Data providers (database connections)
 
-## TODO: Spring implementation | Better distribution of packages | Code behind hamburger menu | Sidebar design
+## TODO: Better distribution of packages | Code behind hamburger menu | Sidebar design
 

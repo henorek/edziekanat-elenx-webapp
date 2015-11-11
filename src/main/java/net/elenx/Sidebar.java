@@ -1,4 +1,4 @@
-package net.elenx.modules;
+package net.elenx;
 
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Alignment;
