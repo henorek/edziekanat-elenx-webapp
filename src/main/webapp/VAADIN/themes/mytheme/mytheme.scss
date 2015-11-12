@@ -121,7 +121,6 @@ $valo-menu-background-color: #eee;
 
   .sidebar {
     background: #24272e;
-
   }
 
   .sidebar-button {
@@ -130,14 +129,14 @@ $valo-menu-background-color: #eee;
     font-family: "Roboto", sans-serif;
     color: #fff;
     padding-left: 25px;
+    margin: 5px 0 5px 0 !important;
     text-align: left;
   }
+
   .logout-button {
     background: #24272e;
     border: #24272e;
     font-family: "Roboto", sans-serif;
     color: #fff;
-
-
   }
 }
