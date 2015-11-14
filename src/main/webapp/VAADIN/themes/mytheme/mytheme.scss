@@ -96,13 +96,11 @@ $valo-menu-background-color: #eee;
     padding-bottom: 5px;
   }
 
-  //Navigation Bar styling
   .navigation-bar {
     background: #fff;
     border: valo-border($border: 1px solid v-shade);
   }
 
-  //Hamburger Button styling
   .hamburger-button {
     background: #fff;
     border: none;
@@ -111,7 +109,6 @@ $valo-menu-background-color: #eee;
     padding: 0 0 0 0 !important;
   }
 
-  //Elenx logo styling
   .elenx-logo {
     font-weight: bold;
     height: 40px !important;

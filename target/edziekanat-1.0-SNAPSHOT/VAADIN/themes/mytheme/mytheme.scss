@@ -96,13 +96,11 @@ $valo-menu-background-color: #eee;
     padding-bottom: 5px;
   }
 
-  //Navigation Bar styling
   .navigation-bar {
     background: #fff;
     border: valo-border($border: 1px solid v-shade);
   }
 
-  //Hamburger Button styling
   .hamburger-button {
     background: #fff;
     border: none;
@@ -111,7 +109,6 @@ $valo-menu-background-color: #eee;
     padding: 0 0 0 0 !important;
   }
 
-  //Elenx logo styling
   .elenx-logo {
     font-weight: bold;
     height: 40px !important;
@@ -121,7 +118,6 @@ $valo-menu-background-color: #eee;
 
   .sidebar {
     background: #24272e;
-
   }
 
   .sidebar-button {
@@ -130,14 +126,14 @@ $valo-menu-background-color: #eee;
     font-family: "Roboto", sans-serif;
     color: #fff;
     padding-left: 25px;
-    text-align:left;
+    margin: 5px 0 5px 0 !important;
+    text-align: left;
   }
-  .logout-button{
+
+  .logout-button {
     background: #24272e;
     border: #24272e;
     font-family: "Roboto", sans-serif;
     color: #fff;
-
-
   }
 }
