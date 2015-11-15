@@ -5,13 +5,14 @@ import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.vaadin.teemu.VaadinIcons;
 
 public class NavigationBar {
 
     @Bean
-    HorizontalLayout navigationBar(Button hamburgerButton, Label elenxLogo) {
+    HorizontalLayout navigationBar(@Qualifier("hamburgerButton") Button hamburgerButton, @Qualifier("elenxLogo") Label elenxLogo) {
         HorizontalLayout navbar = new HorizontalLayout();
         navbar.setWidth("100%");
         navbar.setMargin(true);
