@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 
 @EnableVaadin
-public class SpringConfig {
+public class Template {
 
     @Bean
     public VerticalLayout template(@Qualifier("navigationBar") HorizontalLayout navigationBar, @Qualifier("content") HorizontalLayout content) {

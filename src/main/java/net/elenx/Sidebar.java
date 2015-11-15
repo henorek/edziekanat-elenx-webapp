@@ -13,7 +13,7 @@ import java.util.List;
 public class Sidebar {
 
     @Bean
-    VerticalLayout sidebar(@Qualifier("filler") VerticalLayout filler, Button logoutButton) {
+    VerticalLayout sidebar(@Qualifier("sidebarFiller") VerticalLayout filler, @Qualifier("logoutButton") Button logoutButton) {
         VerticalLayout sidebar = new VerticalLayout();
         MenuButtons menuButtonsDelegation = new MenuButtons();
         List<Button> menuButtons = menuButtonsDelegation.menuButtons();
@@ -33,7 +33,7 @@ public class Sidebar {
     }
 
     @Bean
-    VerticalLayout filler() {
+    VerticalLayout sidebarFiller() {
         VerticalLayout filler = new VerticalLayout();
         filler.setHeightUndefined();
         return filler;

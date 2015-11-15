@@ -13,6 +13,7 @@ public class Content {
         content.setSizeFull();
         content.addComponent(sidebar);
         content.addComponent(mainView);
+        content.setExpandRatio(mainView, 1.0f);
         return content;
     }
 }
