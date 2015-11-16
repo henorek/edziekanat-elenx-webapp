@@ -1,4 +1,4 @@
-package net.elenx;
+package net.elenx.modules;
 
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.VerticalLayout;

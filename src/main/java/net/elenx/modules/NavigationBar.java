@@ -1,4 +1,4 @@
-package net.elenx;
+package net.elenx.modules;
 
 
 import com.vaadin.server.Sizeable;
@@ -25,18 +25,21 @@ public class NavigationBar {
 
     @Bean
     Button hamburgerButton() {
-        Button hamburgerButton = new Button();
-        hamburgerButton.addStyleName("hamburger-button");
-        hamburgerButton.setIcon(VaadinIcons.MENU);
-        return hamburgerButton;
+        Button button = new Button(null, clickEvent -> onHamburgerButtonClick());
+        button.addStyleName("hamburger-button");
+        button.setIcon(VaadinIcons.MENU);
+        return button;
     }
 
     @Bean
     Label elenxLogo() {
-        Label logo = new Label("ElenX");
-        logo.addStyleName("elenx-logo");
-        logo.setWidthUndefined();
-        logo.setEnabled(false);
-        return logo;
+        Label label = new Label("ElenX");
+        label.addStyleName("elenx-logo");
+        label.setWidthUndefined();
+        label.setEnabled(false);
+        return label;
+    }
+
+    private void onHamburgerButtonClick() {
     }
 }

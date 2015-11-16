@@ -1,11 +1,18 @@
-package net.elenx;
+package net.elenx.modules.views;
 
+import com.vaadin.navigator.View;
+import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 
-public class MainView {
+public class MainView implements View {
+
+    @Override
+    public void enter(ViewChangeListener.ViewChangeEvent viewChangeEvent) {
+
+    }
 
     @Bean
     VerticalLayout mainView(@Qualifier("nameLabel") Label nameLabel, @Qualifier("nickLabel") Label nickLabel, @Qualifier("mainViewFiller") VerticalLayout filler) {

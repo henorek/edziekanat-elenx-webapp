@@ -1,7 +1,6 @@
-package net.elenx;
+package net.elenx.modules;
 
 import com.vaadin.server.Sizeable;
-import com.vaadin.ui.Alignment;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.VerticalLayout;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,8 +11,8 @@ import java.util.List;
 
 public class Sidebar {
 
-    @Bean
-    VerticalLayout sidebar(@Qualifier("sidebarFiller") VerticalLayout filler, @Qualifier("logoutButton") Button logoutButton) {
+    @Bean(name = "sidebar")
+    VerticalLayout sidebar(@Qualifier("sidebarFiller") VerticalLayout sidebarFiller, @Qualifier("logoutButton") Button logoutButton) {
         VerticalLayout sidebar = new VerticalLayout();
         MenuButtons menuButtonsDelegation = new MenuButtons();
         List<Button> menuButtons = menuButtonsDelegation.menuButtons();
@@ -21,12 +20,9 @@ public class Sidebar {
         sidebar.setHeight("100%");
         sidebar.setMargin(false);
         sidebar.setSpacing(false);
-        for (Button button : menuButtons) {
-            sidebar.addComponent(button);
-            sidebar.setComponentAlignment(button, Alignment.TOP_LEFT);
-        }
-        sidebar.addComponent(filler);
-        sidebar.setExpandRatio(filler, 1.0f);
+        menuButtons.forEach(sidebar::addComponent);
+        sidebar.addComponent(sidebarFiller);
+        sidebar.setExpandRatio(sidebarFiller, 1.0f);
         sidebar.addStyleName("sidebar");
         sidebar.addComponent(logoutButton);
         return sidebar;
@@ -34,9 +30,9 @@ public class Sidebar {
 
     @Bean
     VerticalLayout sidebarFiller() {
-        VerticalLayout filler = new VerticalLayout();
-        filler.setHeightUndefined();
-        return filler;
+        VerticalLayout sidebarFiller = new VerticalLayout();
+        sidebarFiller.setHeightUndefined();
+        return sidebarFiller;
     }
 
     @Bean

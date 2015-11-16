@@ -1,4 +1,4 @@
-package net.elenx;
+package net.elenx.ui;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
