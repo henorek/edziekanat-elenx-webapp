@@ -1,4 +1,4 @@
-package net.elenx.modules;
+package net.elenx.modules.template;
 
 import com.vaadin.spring.annotation.EnableVaadin;
 import com.vaadin.ui.HorizontalLayout;

@@ -1,15 +1,26 @@
-package net.elenx.modules;
+package net.elenx.modules.navigationbar;
 
 
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
+import net.elenx.modules.spring.BeansManager;
+import net.elenx.modules.spring.Injectable;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.vaadin.teemu.VaadinIcons;
 
-public class NavigationBar {
+public class NavigationBar implements Injectable {
+
+
+    VerticalLayout sidebar;
+
+    //method to inject all the beans which were previously were injected by Spring
+    public void inject(BeansManager beansManager) {
+        this.sidebar = beansManager.getSidebar();
+    }
 
     @Bean
     HorizontalLayout navigationBar(@Qualifier("hamburgerButton") Button hamburgerButton, @Qualifier("elenxLogo") Label elenxLogo) {
@@ -41,5 +52,6 @@ public class NavigationBar {
     }
 
     private void onHamburgerButtonClick() {
+        sidebar.setWidth("1%");
     }
 }

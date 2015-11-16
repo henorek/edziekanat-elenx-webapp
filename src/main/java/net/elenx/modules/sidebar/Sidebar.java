@@ -1,4 +1,4 @@
-package net.elenx.modules;
+package net.elenx.modules.sidebar;
 
 import com.vaadin.server.Sizeable;
 import com.vaadin.ui.Button;
